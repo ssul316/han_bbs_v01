@@ -29,5 +29,22 @@ public class BbsServiceTest {
 		vo.setUserid("han02");
 		service.bbsCreate(vo);
 	}
-
+	
+	@Test
+	public void readTest(){
+		vo = service.read("448");
+		logger.info(vo);
+	}
+	
+	@Test
+	public void updateTest(){
+		vo.setTitle("¿Ö!!!");
+		vo.setBno(451);
+		service.update(vo);
+	}
+	
+	@Test
+	public void deleteTest(){
+		service.delete("451");
+	}
 }

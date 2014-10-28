@@ -13,8 +13,23 @@ public class BbsService {
 	@Inject
 	BbsMapper mapper;
 	
+	@Inject
+	BbsVO vo;
+	
 	public void bbsCreate(BbsVO vo){
 		mapper.create(vo);
+	}
+	
+	public BbsVO read(String bno){
+		return mapper.read(bno);
+	}
+	
+	public void update(BbsVO vo){
+		mapper.update(vo);
+	}
+	
+	public void delete(String bno){
+		mapper.delete(bno);
 	}
 
 }
