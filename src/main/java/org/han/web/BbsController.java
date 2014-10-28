@@ -31,10 +31,14 @@ public class BbsController {
 //		return "bbs/list";
 //		
 //	}
+	
+	@RequestMapping("/main")
+	public String main(){
+		return "bbs/main";
+	}
 		
 	@RequestMapping("/list")
-	public @ResponseBody List<BbsVO> list(@RequestParam(value="page", defaultValue="1") String page, Model model){
+	public @ResponseBody List<BbsVO> list(@RequestParam(value="page", defaultValue="1") String page){
 		return service.list(page);
 	}
-
 }
