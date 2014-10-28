@@ -1,5 +1,7 @@
 package org.han.web;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.log4j.Logger;
@@ -46,5 +48,12 @@ public class BbsServiceTest {
 	@Test
 	public void deleteTest(){
 		service.delete("451");
+	}
+	
+	@Test
+	public void listTest(){
+		List<BbsVO> list = service.list("1");
+		logger.info(list);
+		
 	}
 }

@@ -1,5 +1,7 @@
 package org.han.service;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.han.mapper.BbsMapper;
@@ -30,6 +32,10 @@ public class BbsService {
 	
 	public void delete(String bno){
 		mapper.delete(bno);
+	}
+	
+	public List<BbsVO> list(String page){
+		return mapper.list(page);
 	}
 
 }
