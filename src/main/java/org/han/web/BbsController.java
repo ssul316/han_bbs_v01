@@ -41,4 +41,9 @@ public class BbsController {
 	public @ResponseBody List<BbsVO> list(@RequestParam(value="page", defaultValue="1") String page){
 		return service.list(page);
 	}
+	
+	@RequestMapping("/read")
+	public @ResponseBody BbsVO read(@RequestParam(value="bno", defaultValue="") String bno){
+		return service.read(bno);
+	}
 }

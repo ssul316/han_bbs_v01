@@ -26,9 +26,9 @@ public class BbsServiceTest {
 	
 	@Test
 	public void Createtest() {
-		vo.setTitle("야!!");
-		vo.setCont("힘들어...");
-		vo.setUserid("han02");
+		vo.setTitle("명진아");
+		vo.setCont("졸업시험 패스해서 좋냐?");
+		vo.setUserid("han00");
 		service.bbsCreate(vo);
 	}
 	
