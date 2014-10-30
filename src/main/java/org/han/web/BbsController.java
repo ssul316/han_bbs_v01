@@ -43,7 +43,13 @@ public class BbsController {
 	}
 	
 	@RequestMapping("/read")
-	public @ResponseBody BbsVO read(@RequestParam(value="bno", defaultValue="") String bno){
-		return service.read(bno);
+	public String read(@RequestParam(value="bno", defaultValue="") String bno, Model model){
+		model.addAttribute("read" , service.read(bno));
+		return "bbs/read";
 	}
+	
+//	@RequestMapping("/readObj")
+//	public @ResponseBody BbsVO read(@RequestParam(value="bno", defaultValue="") String bno){
+//		return service.read(bno);
+//	}
 }
